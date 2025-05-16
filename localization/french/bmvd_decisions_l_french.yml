@@ -2,7 +2,7 @@
  mass_directive_decisions: "Changer les Directives des Vassaux"
  give_vassal_directive_interaction_desc: "Modifier les Directives de vos Vassaux"
  mass_directive_decisions_confirm: "Définir les Directives de vos Vassaux"
- mass_directive_decisions_tooltip : "Cette option modifiera les directives de tous les vassaux disponibles"
+ mass_directive_decisions_tooltip: "Cette option modifiera les directives de tous les vassaux disponibles"
  mod_new_decision_improve_development: "@task_develop_county! Améliorer le [development|E]"
  mod_new_decision_train_commanders: "@task_train_commanders! Renforcer les [Concept('men_at_arms', 'Hommes d’Armes')|E]"
  mod_new_decision_build_maa: "@directive_maa! Recruter des [Concept('men_at_arms', 'Hommes d’Armes')|E]"

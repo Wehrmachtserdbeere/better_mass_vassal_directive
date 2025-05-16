@@ -2,7 +2,7 @@
  mass_directive_decisions: "Изменить наказы вассалам"
  give_vassal_directive_interaction_desc: "Изменить наказы вашим вассалам"
  mass_directive_decisions_confirm: "Дать наказы вашим вассалам"
- mass_directive_decisions_tooltip : "Этот выбор затронет всех доступных вам вассалов"
+ mass_directive_decisions_tooltip: "Этот выбор затронет всех доступных вам вассалов"
  mod_new_decision_improve_development: "@task_develop_county! Улучшить [development|E]"
  mod_new_decision_train_commanders: "@task_train_commanders! Обучить [men_at_arms|E]"
  mod_new_decision_build_maa: "@directive_maa! Нанять [men_at_arms|E]"

@@ -2,7 +2,7 @@
  mass_directive_decisions: "Vasallanweisungen ändern"
  give_Vasall_directive_interaction_desc: "Ändere die Anweisungen, welche deine Vasallen einhalten sollen."
  mass_directive_decisions_confirm: "Setze deine Vasallenanweisungen"
- mass_directive_decisions_tooltip : "Diese Option wird für alle verfügbaren Vasallen geänder"
+ mass_directive_decisions_tooltip: "Diese Option wird für alle verfügbaren Vasallen geänder"
  mod_new_decision_improve_development: "@task_develop_county! [development|E] verbessern"
  mod_new_decision_train_commanders: "@task_train_commanders! [Concept('men_at_arms', 'Kriegsvolk')|E] verstärken"
  mod_new_decision_build_maa: "@directive_maa! [Concept('men_at_arms', 'Kriegsvolk')|E] rekrutieren"

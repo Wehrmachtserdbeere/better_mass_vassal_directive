@@ -2,7 +2,7 @@
  mass_directive_decisions: "Zmień dyrektywy wasalne"
  give_vassal_directive_interaction_desc: "Zmień swoje Dyrektywy Wasalne"
  mass_directive_decisions_confirm: "Ustaw swoje Dyrektywy Wasalne"
- mass_directive_decisions_tooltip : "Ta opcja zostanie zmieniona dla wszystkich dostępnych wasali"
+ mass_directive_decisions_tooltip: "Ta opcja zostanie zmieniona dla wszystkich dostępnych wasali"
  mod_new_decision_improve_development: "@task_develop_county! Usprawnij [development|El]"
  mod_new_decision_train_commanders: "@task_train_commanders! Wzmocnij [Concept('men_at_arms', 'zbrojnych')|E]"
  mod_new_decision_build_maa: "@directive_maa! Zrekrutuj [Concept('men_at_arms', 'zbrojnych')|E]"
