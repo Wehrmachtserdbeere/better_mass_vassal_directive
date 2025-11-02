@@ -81,10 +81,15 @@
 				trigger = yes
 				
 				scope:mod_improve_development ?= {
-					limit = { highest_held_title_tier >= tier_duchy }
+					# I'm not entirely sure if the previous limit broke in 1.18.0 or if it never worked at all before but it should work now
+					if = {
+						limit = {
+							highest_held_title_tier >= tier_duchy
+						}
 					custom_tooltip = mod_new_decision_improve_development_tooltip
 					remove_vassal_directives = yes
 					add_character_flag = vassal_directive_improve_development
+					}
 				}
 				
 				scope:mod_train_commanders ?= {
@@ -112,9 +117,15 @@
 				}
 				
 				scope:mod_improve_cultural_acceptance ?= {
+					# Adding this due to improve cultural acceptance requiring duchy title or greater in vanilla interaction
+					if = {
+						limit = {
+							highest_held_title_tier >= tier_duchy
+						}
 					remove_vassal_directives = yes
 					custom_tooltip = mod_new_decision_convert_culture_tooltip
 					add_character_flag = vassal_directive_improve_cultural_acceptance
+					}
 				}
 				
 				scope:mod_building_focus_fortification ?= {
