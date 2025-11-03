@@ -13,8 +13,8 @@
  mod_new_decision_building_focus_military: "@directive_military! [military_buildings|E] bauen"
  mod_new_decision_building_focus_economy: "@directive_economical! [economic_buildings|E] bauen"
  mod_new_decision_remove_directive: "@directive_refusal! Bestehende [Concept('directive', 'Anweisung')|E] entfernen"
- 
- mass_directive_decisions_tooltip: "Dies wird die Anweisungen deiner Vasallen ändern."
+
+ mod_new_train_commanders_tooltip: "Kommandanten Trainieren"
  mod_new_decision_improve_development_tooltip: "Entwicklung verbessern"
  mod_new_decision_train_commanders_tooltip: "Kommandanten Trainieren"
  mod_new_decision_build_maa_tooltip: "Kriegsvolk rekrutieren"

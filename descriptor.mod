@@ -1,9 +1,10 @@
-version="1.0.1"
+version="1.0.3"
 tags={
-	"Utilities"
-	"Fixes"
+	"1.18 'Crane'"
 	"Decisions"
+	"Gameplay"
+	"Utilities"
 }
 name="Better Mass Vassal Directive"
-supported_version="*.*.*"
+supported_version="1.18.*"
 remote_file_id="3378093812"

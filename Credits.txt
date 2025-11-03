@@ -2,6 +2,7 @@
 # Code #
 Nightwolf
 Strawberry
+Hazerre
 
 # Translations #
 English - Nightwolf & Strawberry

@@ -13,8 +13,8 @@
  mod_new_decision_building_focus_military: "@directive_military! Zbuduj [military_buildings|El]"
  mod_new_decision_building_focus_economy: "@directive_economical! Zbuduj [economic_buildings|El]"
  mod_new_decision_remove_directive: "@directive_refusal! Wycofaj obecnie obowiązującą [Concept('directive', 'dyrektywę')|E]"
- 
- mass_directive_decisions_tooltip: "To zmieni dyrektywę twojego wasala"
+
+ mod_new_train_commanders_tooltip: "Wzmocnij zbrojnych"
  mod_new_decision_improve_development_tooltip: "Usprawniaj rozwój"
  mod_new_decision_train_commanders_tooltip: "Wzmocnij zbrojnych"
  mod_new_decision_build_maa_tooltip: "Zrekrutuj zbrojnych"

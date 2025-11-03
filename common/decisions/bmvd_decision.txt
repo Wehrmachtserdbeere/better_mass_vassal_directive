@@ -4,7 +4,8 @@
 	}
 	desc = mass_directive_decisions
 	confirm_text = mass_directive_decisions_confirm
-	custom_tooltip = mass_directive_decisions_tooltip
+	selection_tooltip = mass_directive_decisions_tooltip
+	decision_group_type = decisions
 	
 	is_shown = {
 		any_vassal = {
@@ -23,52 +24,52 @@
  
 		item = {
 			value = mod_improve_development	
-			custom_tooltip = mod_improve_development_tooltip
+			current_description = mod_improve_development_tooltip
 			localization = mod_new_decision_improve_development
 		}
 		item = {
 			value = mod_train_commanders
-			custom_tooltip = mod_new_train_commanders_tooltip	
+			current_description = mod_new_train_commanders_tooltip
 			localization = mod_new_decision_train_commanders
 		}
 		item = {
 			value = mod_build_maa	
-			custom_tooltip = mod_build_maa_tooltip
+			current_description = mod_build_maa_tooltip
 			localization = mod_new_decision_build_maa
 		}	
         item = {
 			value = mod_convert_faith
-			custom_tooltip = mod_convert_faith_tooltip
+			current_description = mod_convert_faith_tooltip
 			localization = mod_new_decision_convert_faith
 		}
 		item = {
 			value = mod_convert_culture	
-			custom_tooltip = mod_convert_culture_tooltip
+			current_description = mod_convert_culture_tooltip
 			localization = mod_new_decision_convert_culture
 		}
 		item = {
 			value = mod_improve_cultural_acceptance	
-			custom_tooltip = mod_improve_cultural_acceptance_tooltip
+			current_description = mod_improve_cultural_acceptance_tooltip
 			localization = mod_new_decision_improve_cultural_acceptance
 		}
 		item = {
 			value = mod_building_focus_fortification	
-			custom_tooltip = mod_building_focus_fortification_tooltip
+			current_description = mod_building_focus_fortification_tooltip
 			localization = mod_new_decision_building_focus_fortification
 		}
 		item = {
 			value = mod_building_focus_military	
-			custom_tooltip = mod_building_focus_military_tooltip
+			current_description = mod_building_focus_military_tooltip
 			localization = mod_new_decision_building_focus_military
 		}
 		item = {
 			value = mod_building_focus_economy
-			custom_tooltip = mod_building_focus_economy_tooltip
+			current_description = mod_building_focus_economy_tooltip
 			localization = mod_new_decision_building_focus_economy
 		}
 		item = {
 			value = mod_remove_directive	
-			custom_tooltip = mod_remove_directive_tooltip
+			current_description = mod_remove_directive_tooltip
 			localization = mod_new_decision_remove_directive
 		}
 	}
@@ -76,15 +77,20 @@
 	effect = {
 		every_vassal = {
 			limit = { highest_held_title_tier >= tier_county }
+			# current_description = { }
 			custom_tooltip = { }
 			switch = {
 				trigger = yes
 				
 				scope:mod_improve_development ?= {
-					limit = { highest_held_title_tier >= tier_duchy }
-					custom_tooltip = mod_new_decision_improve_development_tooltip
-					remove_vassal_directives = yes
-					add_character_flag = vassal_directive_improve_development
+					if = {
+						limit = {
+							highest_held_title_tier >= tier_duchy
+						}
+						custom_tooltip = mod_new_decision_improve_development_tooltip
+						remove_vassal_directives = yes
+						add_character_flag = vassal_directive_improve_development
+					}
 				}
 				
 				scope:mod_train_commanders ?= {
@@ -112,9 +118,14 @@
 				}
 				
 				scope:mod_improve_cultural_acceptance ?= {
+					if = {
+						limit = {
+							highest_held_title_tier >= tier_duchy
+						}
 					remove_vassal_directives = yes
 					custom_tooltip = mod_new_decision_convert_culture_tooltip
 					add_character_flag = vassal_directive_improve_cultural_acceptance
+					}
 				}
 				
 				scope:mod_building_focus_fortification ?= {
@@ -146,4 +157,12 @@
     # The AI should never do this!
 	ai_will_do = { base = 0 }
     ai_check_interval = 0
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 0
+		kingdom = 0
+		empire = 0
+		hegemony = 0
+	}
 }

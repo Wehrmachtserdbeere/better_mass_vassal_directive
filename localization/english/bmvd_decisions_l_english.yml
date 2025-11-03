@@ -13,8 +13,8 @@
  mod_new_decision_building_focus_military: "@directive_military! Construct [military_buildings|E]"
  mod_new_decision_building_focus_economy: "@directive_economical! Construct [economic_buildings|E]"
  mod_new_decision_remove_directive: "@directive_refusal! Remove Existing [Concept('directive', 'directive')|E]"
- 
- mass_directive_decisions_tooltip: "This will change your vassals directive"
+
+ mod_new_train_commanders_tooltip: "Train Commanders"
  mod_new_decision_improve_development_tooltip: "Improve Development"
  mod_new_decision_train_commanders_tooltip: "Train Commanders"
  mod_new_decision_build_maa_tooltip: "Recruit Men-at-Arms"
