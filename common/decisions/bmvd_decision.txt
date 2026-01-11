@@ -123,7 +123,7 @@
 							highest_held_title_tier >= tier_duchy
 						}
 					remove_vassal_directives = yes
-					custom_tooltip = mod_new_decision_convert_culture_tooltip
+					custom_tooltip = mod_improve_cultural_acceptance_tooltip
 					add_character_flag = vassal_directive_improve_cultural_acceptance
 					}
 				}
@@ -136,7 +136,7 @@
 				
 				scope:mod_building_focus_military ?= {
 					remove_vassal_directives = yes
-					custom_tooltip = mod_new_decision_building_focus_economy_tooltip
+					custom_tooltip = mod_new_decision_building_focus_military_tooltip
 					add_character_flag = vassal_directive_building_focus_military
 				}
 				
