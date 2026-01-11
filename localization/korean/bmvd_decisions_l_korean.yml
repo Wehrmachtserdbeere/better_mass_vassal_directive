@@ -31,7 +31,7 @@
  mod_build_maa_tooltip: "무장병을 모집합니다"
  mod_convert_faith_tooltip: "신앙을 개종합니다"
  mod_convert_culture_tooltip: "문화를 촉진합니다"
- mod_improve_cultural_acceptance_tooltip: "문화 관용을 증가시킵니다e"
+ mod_improve_cultural_acceptance_tooltip: "문화 관용을 증가시킵니다"
  mod_building_focus_fortification_tooltip: "요새 건물을 건설합니다"
  mod_building_focus_military_tooltip: "군사 건물을 건설합니다"
  mod_building_focus_economy_tooltip: "경제 건물을 건설합니다"
