@@ -1,4 +1,4 @@
-﻿mass_directive_decisions = { 
+﻿mass_directive_decisions = {
 	picture = {
 		reference = "gfx/interface/illustrations/decisions/fp2_decision_struggle_compromise.dds"
 	}
@@ -43,9 +43,19 @@
 			localization = mod_new_decision_convert_faith
 		}
 		item = {
+			value = mod_convert_faith_own
+			current_description = mod_convert_faith_own_tooltip
+			localization = mod_new_decision_convert_faith_own
+		}
+		item = {
 			value = mod_convert_culture	
 			current_description = mod_convert_culture_tooltip
 			localization = mod_new_decision_convert_culture
+		}
+		item = {
+			value = mod_convert_culture_own	
+			current_description = mod_convert_culture_own_tooltip
+			localization = mod_new_decision_convert_culture_own
 		}
 		item = {
 			value = mod_improve_cultural_acceptance	
@@ -111,10 +121,32 @@
 					add_character_flag = vassal_directive_convert_faith
 				}
 				
+				scope:mod_convert_faith_own ?= {
+					if = {
+						limit = { 
+							faith = root.faith
+						}
+					remove_vassal_directives = yes
+					custom_tooltip = mod_new_decision_convert_faith_tooltip
+					add_character_flag = vassal_directive_convert_faith
+					}
+				}
+				
 				scope:mod_convert_culture ?= {
 					remove_vassal_directives = yes
 					custom_tooltip = mod_new_decision_convert_culture_tooltip
 					add_character_flag = vassal_directive_convert_culture
+				}
+				
+				scope:mod_convert_culture_own ?= {
+					if = {
+						limit = { 
+							culture = root.culture
+						}
+					remove_vassal_directives = yes
+					custom_tooltip = mod_new_decision_convert_culture_tooltip
+					add_character_flag = vassal_directive_convert_culture
+					}
 				}
 				
 				scope:mod_improve_cultural_acceptance ?= {
