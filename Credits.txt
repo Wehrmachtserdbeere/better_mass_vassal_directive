@@ -3,6 +3,7 @@
 Nightwolf
 Strawberry
 Hazerre
+Czechys (https://github.com/Czechys)
 
 # Translations #
 English - Nightwolf & Strawberry
