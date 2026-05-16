@@ -178,7 +178,12 @@
 				scope:mod_improve_cultural_acceptance ?= {
 					if = {
 						limit = {
-							highest_held_title_tier >= tier_duchy
+							AND = {
+								highest_held_title_tier >= tier_duchy
+								any_sub_realm_county = {
+									culture != prev.culture
+								}
+							}
 						}
 					remove_vassal_directives = yes
 					custom_tooltip = mod_improve_cultural_acceptance_tooltip
