@@ -116,32 +116,58 @@
 				}
 				
 				scope:mod_convert_faith ?= {
-					remove_vassal_directives = yes
-					custom_tooltip = mod_new_decision_convert_faith_tooltip
-					add_character_flag = vassal_directive_convert_faith
+					if = {
+						limit = {
+							any_sub_realm_county = {
+								faith != prev.faith
+							}
+						}
+						remove_vassal_directives = yes
+						custom_tooltip = mod_new_decision_convert_faith_tooltip
+						add_character_flag = vassal_directive_convert_faith
+					}
 				}
 				
 				scope:mod_convert_faith_own ?= {
 					if = {
 						limit = { 
-							faith = root.faith
+							AND = {
+								faith = root.faith
+							
+								any_sub_realm_county = {
+									faith != prev.faith
+								}	
+							}
 						}
-					remove_vassal_directives = yes
-					custom_tooltip = mod_new_decision_convert_faith_tooltip
-					add_character_flag = vassal_directive_convert_faith
+						remove_vassal_directives = yes
+						custom_tooltip = mod_new_decision_convert_faith_tooltip
+						add_character_flag = vassal_directive_convert_faith
 					}
 				}
 				
 				scope:mod_convert_culture ?= {
-					remove_vassal_directives = yes
-					custom_tooltip = mod_new_decision_convert_culture_tooltip
-					add_character_flag = vassal_directive_convert_culture
+					if = {
+						limit = {
+							any_sub_realm_county = {
+								culture != prev.culture
+							}
+						}
+						remove_vassal_directives = yes
+						custom_tooltip = mod_new_decision_convert_culture_tooltip
+						add_character_flag = vassal_directive_convert_culture
+					}
 				}
 				
 				scope:mod_convert_culture_own ?= {
 					if = {
 						limit = { 
-							culture = root.culture
+							AND = {
+								culture = root.culture
+							
+								any_sub_realm_county = {
+									culture != prev.culture
+								}	
+							}
 						}
 					remove_vassal_directives = yes
 					custom_tooltip = mod_new_decision_convert_culture_tooltip
@@ -152,7 +178,12 @@
 				scope:mod_improve_cultural_acceptance ?= {
 					if = {
 						limit = {
-							highest_held_title_tier >= tier_duchy
+							AND = {
+								highest_held_title_tier >= tier_duchy
+								any_sub_realm_county = {
+									culture != prev.culture
+								}
+							}
 						}
 					remove_vassal_directives = yes
 					custom_tooltip = mod_improve_cultural_acceptance_tooltip
